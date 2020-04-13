@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<system xmlns="http://www.eiffel.com/developers/xml/configuration-1-20-0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.eiffel.com/developers/xml/configuration-1-20-0 http://www.eiffel.com/developers/xml/configuration-1-20-0.xsd" name="launcher" uuid="474C1A3B-2E92-4032-86FF-90A5ECBCAF7E">
+	<description>
+		Launcher of multiple programs that run in parallel in SCOOP mode.
+		Copyright (c) 2020, Alexander Kogtenkov.
+		BSD 3-Clause License (https://spdx.org/licenses/BSD-3-Clause.html), see LICENSE document.
+	</description>
+	<target name="launcher">
+		<root cluster="launcher" class="APPLICATION" feature="make_and_launch"/>
+		<file_rule>
+			<exclude>/CVS$</exclude>
+			<exclude>/EIFGENs$</exclude>
+			<exclude>/\.git$</exclude>
+			<exclude>/\.svn$</exclude>
+		</file_rule>
+		<option warning="true">
+			<assertions precondition="true" postcondition="true" check="true" invariant="true" loop="true" supplier_precondition="true"/>
+		</option>
+		<setting name="dead_code_removal" value="feature"/>
+		<capability>
+			<catcall_detection support="none"/>
+			<concurrency support="scoop" use="scoop"/>
+			<void_safety support="all"/>
+		</capability>
+		<precompile name="vision2_pre" location="$ISE_PRECOMP\vision2-scoop-safe.ecf"/>
+		<library name="base" location="$ISE_LIBRARY\library\base\base.ecf"/>
+		<library name="scoop" location="..\..\library\scoop.ecf"/>
+		<library name="vision2" location="$ISE_LIBRARY\library\vision2\vision2.ecf"/>
+		<cluster name="launcher" location=".\"/>
+	</target>
+</system>
