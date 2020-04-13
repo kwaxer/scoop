@@ -18,4 +18,4 @@ EIFGENs/launcher/W_code/launcher
 3. Use the library in your project by adding a reference to `scoop-master/library/scoop.ecf`.
 4. Include the license and copyright notice in your project.
 ## System requirements
-The software was tested with (EiffelStudio)[https://www.eiffel.org/downloads] 19.05 (stable) and 19.12 (beta) releases.
+The software was tested with [EiffelStudio](https://www.eiffel.org/downloads) 19.05 (stable) and 19.12 (beta) releases.
