@@ -12,9 +12,9 @@ unzip master.zip
 2. Compile and run an example, e.g.
 ```
 cd scoop-master/example/launcher
-ec -freeze -config launcher.ecf -c_compile
-EIFGENs/launcher/W_code/launcher
 ```
+and then follow the corresponding [instructions](https://github.com/kwaxer/scoop/tree/master/example/launcher).
+
 3. Use the library in your project by adding a reference to `scoop-master/library/scoop.ecf`.
 4. Include the license and copyright notice in your project.
 ## System requirements
